@@ -7,7 +7,8 @@ class Graph {
     }
   }
 
-  void addEdge(String vertex, String destinationVertex, {bool bidirectional = false}) {
+  void addEdge(String vertex, String destinationVertex,
+      {bool bidirectional = false}) {
     if (!adjacencyList.containsKey(vertex)) {
       addVertex(vertex);
     }
@@ -28,10 +29,12 @@ class Graph {
 
   void deleteEdge(String vertex, String destinationVertex) {
     if (adjacencyList.containsKey(vertex)) {
-      adjacencyList[vertex] = adjacencyList[vertex]!.where((v) => v != destinationVertex).toList();
+      adjacencyList[vertex] =
+          adjacencyList[vertex]!.where((v) => v != destinationVertex).toList();
     }
     if (adjacencyList.containsKey(destinationVertex)) {
-      adjacencyList[destinationVertex] = adjacencyList[destinationVertex]!.where((v) => v != vertex).toList();
+      adjacencyList[destinationVertex] =
+          adjacencyList[destinationVertex]!.where((v) => v != vertex).toList();
     }
   }
 
@@ -96,6 +99,7 @@ void main() {
   graph.addEdge('A', 'C', bidirectional: true);
   graph.addEdge('B', 'C', bidirectional: true);
   graph.addEdge('C', 'D', bidirectional: true);
+  // graph.addEdge('B', 'E', bidirectional: true);
 
   print("Graph before deleting vertex:");
   print(graph.adjacencyList);
@@ -105,6 +109,6 @@ void main() {
   // print("Graph after deleting vertex:");
   // print(graph.adjacencyList);
 
-  // print("BFS traversal from vertex 'B': ${graph.bfs('A')}");
-  print("DFS traversal from vertex 'B': ${graph.dfs('A')}");
+  print("BFS traversal from vertex 'A': ${graph.bfs('A')}");
+  // print("DFS traversal from vertex 'A': ${graph.dfs('A')}");
 }

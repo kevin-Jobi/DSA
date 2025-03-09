@@ -1,10 +1,8 @@
-
-
-//Complixity 
+//Complixity
 
 // void main() {
 //  List<int> movingTargettoEnd(nums,target){
-  
+
 //   int temp;
 //   int i=0;
 //   int j=nums.length-1;
@@ -19,7 +17,7 @@
 //       }
 //     i++;
 //   }
- 
+
 //   return nums;
 // }
 // List<int>nums=[6,1,6,8,10,4,15,6,3,9,6];
@@ -32,7 +30,7 @@
 
 // void main(){
 // sum(list,target){
-  
+
 // Set<int>set={};
 // for(int i=0;i<list.length;i++){
 //   int temp= target-list[i];
@@ -63,10 +61,10 @@
 //   // Method to add a node at the end of the list
 //   void add(int data) {
 //     Node newNode = Node(data);
-    
+
 //     if (head == null) {
 //       head = newNode;
-//     } else { 
+//     } else {
 //       Node? current = head;
 //       while (current!.next != null) {
 //         current = current.next;
@@ -78,7 +76,7 @@
 //   // Method to print the list
 //   void printList() {
 //     Node? current = head;
-    
+
 //     while (current != null) {
 //       print(current.data);
 //       current = current.next;
@@ -93,62 +91,68 @@
 //   list.add(10);
 //   list.add(20);
 //   list.add(30);
+//   list.add(40);
 
 //   // Printing the added values
 //   list.printList();
+
 // }
 
 // --------------------------------------------------------------------
-// class Node{
+
+// class Node {
 //   int data;
 //   Node? next;
 //   Node(this.data);
 // }
-// class LinkedList{
+
+// class LinkedList {
 //   Node? head;
 //   Node? tail;
-//   void add(int data){
-//     Node newNode =Node(data);
-//     if(head==null){
-//       head=newNode;
-//     }else{
-//       Node? current=head;
-//       while(current!.next != null){
-//         current=current.next;
+//   void add(int data) {
+//     Node newNode = Node(data);
+//     if (head == null) {
+//       head = newNode;
+//     } else {
+//       Node? current = head;
+//       while (current!.next != null) {
+//         current = current.next;
 //       }
-//       current.next=newNode;
+//       current.next = newNode;
 //     }
 //   }
-//   void delete(int data){
-//     Node? temp=head;
-//     Node? prev=null;
-//     if(temp !=null && temp.data ==data){
+
+//   void delete(int data) {
+//     Node? temp = head;
+//     Node? prev = null;
+//     if (temp != null && temp.data == data) {
 //       head = temp.next;
 //       return;
 //     }
-//     while(temp !=null && temp.data !=data){
+//     while (temp != null && temp.data != data) {
 //       prev = temp;
 //       temp = temp.next;
 //     }
-//     prev!.next=temp!.next;
-   
+//     prev!.next = temp!.next;
 //   }
-//   void printList(){
-//   Node? current=head;
-//   while(current!=null){
-//     print(current.data);
-//     current=current.next;
+
+//   void printList() {
+//     Node? current = head;
+//     while (current != null) {
+//       print(current.data);
+//       current = current.next;
+//     }
 //   }
 // }
-// }
-// void main(){
-//   LinkedList list =LinkedList();
+
+// void main() {
+//   LinkedList list = LinkedList();
 //   list.add(10);
 //   list.add(20);
 //   list.add(30);
 //   // list.delete(20);
 //   list.printList();
-//   }
+// }
 
 // ----------------------------------------------------------
 
@@ -156,7 +160,7 @@
 //   List<int>nums=[1,2,3,4];
 //   nums.insertAll(2, [5,6]);
 //   print(nums);
-  
+
 //   List<int>arr= nums.reversed.toList();
 //   print(arr);
 // }
@@ -184,6 +188,14 @@
 //     }
 //   }
 
+//     void printList() {
+//     Node? current = head;
+//     while (current != null) {
+//       print(current.data);
+//       current = current.next;
+//     }
+//   }
+
 //   void delete(int data) {
 //     Node? temp = head;
 //     Node? prev = null;
@@ -196,7 +208,7 @@
 //       return;
 //     }
 
-//    while (temp != null && temp.data != data) {  
+//     while (temp != null && temp.data != data) {
 //       prev = temp;
 //       temp = temp.next;
 //     }
@@ -207,14 +219,6 @@
 
 //     if (prev.next == null) {
 //       tail = prev; // Update tail if the last node was deleted
-//     }
-//   }
-
-//   void printList() {
-//     Node? current = head;
-//     while (current != null) {
-//       print(current.data);
-//       current = current.next;
 //     }
 //   }
 
@@ -240,11 +244,10 @@
 
 //   void insertAfter(int afterData, int newData) {
 //     Node? current = head;
-//     while (current != null && current.data != afterData) { 
-//       current = current.next;  // node current is having the data of afterData
+//     while (current != null && current.data != afterData) {
+//       current = current.next; // node current is having the data of afterData
 //     }
 //     if (current != null) {
-
 //       Node newNode = Node(newData);
 //       newNode.next = current.next;
 //       current.next = newNode;
@@ -261,139 +264,39 @@
 
 // void main() {
 //   LinkedList list = LinkedList();
-  
-//   list.add(10);
-//   list.add(20);
-//   list.add(30);
-//   list.add(40);
-  
+
+//   // list.add(10);
+//   // list.add(20);
+//   // list.add(30);
+//   // list.add(40);
+
 //   print("Original list:");
-//   list.printList();
-  
-//   list.delete(30);
-//   print("\nAfter deleting :");
-//   list.printList();
-  
+
+//   // list.delete(30);
+//   // print("\nAfter deleting :");
+//   // list.printList();
+
 //   list.addAtBeginning(5);
-//   print("\nAfter adding 5 at the beginning:");
 //   list.printList();
- 
-  
-//   list.insertAfter(50, 15);
-//   print("\nAfter inserting 15 after 10:");
-//   list.printList();
-  
-//   print("\nIs 30 in the list? ${list.search(30)}");
-//   print("Is 20 in the list? ${list.search(20)}");
-  
-//   print("\nIs the list empty? ${list.isEmpty()}");
+//   // print("\nAfter adding 5 at the beginning:");
+//   // list.printList();
+
+//   // list.insertAfter(50, 15);
+//   // print("\nAfter inserting 15 after 10:");
+//   // list.printList();
+
+//   // print("\nIs 30 in the list? ${list.search(30)}");
+//   // print("Is 20 in the list? ${list.search(20)}");
+
+//   // print("\nIs the list empty? ${list.isEmpty()}");
 // }
 
 // ----------------------------------------------------------------===========================================================================
 
-
-
-// class Node{
-//   int data;
-//   Node? next;
-//   Node(this.data);
-// }
-// class LinkedList{
-//   Node? head;
-//   Node? tail;
-//   void add(int data){
-//     Node newNode=Node(data);
-//     if(head ==null){
-//       head =newNode;
-//       tail= newNode;
-//     }else{
-//       tail!.next=newNode;
-//       tail=newNode;
-//     }
-    
-//   }
-// void delete(data){
-//   Node?temp=head;
-  
-    
-//   if(temp!=null&&temp.data==data){
-//     head=temp.next;
-//     if(head==null){
-//       tail=null;
-//     }
-//     return;
-//   }
-
-//   Node?prev;
-//   while(temp!=null&&temp.data!=data){
-//     prev=temp;
-//     temp=temp.next;
-//   }
-//   prev?.next=temp?.next;
-//   if(prev?.next==null){
-//     tail=prev;
-//   }
-// }
-// addAtBeginning(data){
-//   Node?newNode=Node(data);
-//   newNode.next=head;
-//   head=newNode;
-// }
-// search(data){
-//  Node? current=head;
-//  while(current!=null){
-//   if(current.data==data){
-//     return true;
-//   }
-//   current=current.next;
-//  }
-//  return false;
-// }
-// insertAfter(afterData,newdata){
-// Node?current=head;
-// Node?newNode=Node(newdata);
-// while(current!=null&&current.data!=afterData){
-//   current=current.next;
-  
-// }
-// if(current!=null){
- 
-//   newNode.next=current.next;
-//   current.next=newNode;
-//   if(current==tail){
-//     tail=newNode;
-//   }
-// }
-// }
-//   printList(){
-//     Node? temp=head;
-//     while(temp!=null){
-//       print(temp.data);
-//       temp=temp.next;
-//     }
-//   }
-// }
-// void main(){
-//   LinkedList list =LinkedList();
-//   list.add(12);
-//   list.add(24);
-//   list.add(34);
-  
-//   list.addAtBeginning(77);
-//   print(list.search(13));
-//   list.insertAfter(12, 36);
-//   list.delete(30);
-  
-//   list.printList();
-// }
-
-
-
 // ==============================================================================
 
-
 // void main() {
-//   String letter = 'c'; // change this to any letter
+//   String letter = 'ab'; // change this to any letter
 //   print(getAlphabetPosition(letter));
 // }
 
@@ -413,7 +316,6 @@
 
 // ===================================================================================
 
-
 // void main(){
 //   List<int>numbers=[1,2,3,4,5];
 //   //arr.addAll([4,5]);
@@ -427,44 +329,47 @@
 // // print(numbers.contains(2));
 // // print(numbers.indexOf(3));
 
-
 //   print(numbers);
 //   var nums=numbers.map((e) => e*2);
+//   print(nums);
 // }
 
 // =====================================================
 
-// class Node{
+// class Node {
 //   int data;
 //   Node? next;
 //   Node(this.data);
 // }
-// class LinkedList{
+
+// class LinkedList {
 //   Node? head;
 //   Node? tail;
-//   add(int data){
-//     Node newNode=Node(data);
-//     if(head==null){
-//       head=newNode;
-//     }else{
-//       Node? current=head;
-//       while(current!.next!=null){
-//         current=current.next;
+//   add(int data) {
+//     Node newNode = Node(data);
+//     if (head == null) {
+//       head = newNode;
+//     } else {
+//       Node? current = head;
+//       while (current!.next != null) {
+//         current = current.next;
 //       }
-//       current.next=newNode;
+//       current.next = newNode;
 //     }
 //   }
-// reverse(){
-//   Node? pre=null;
-//   Node? curr=head;
-//   while(curr!=null){
-//     Node? cnex=curr.next;
-//     curr.next=pre;
-//     pre=curr;
-//     curr=cnex;
+
+//   reverse() {
+//     Node? pre = null;
+//     Node? curr = head;
+//     while (curr != null) {
+//       Node? cnex = curr.next;
+//       curr.next = pre;
+//       pre = curr;
+//       curr = cnex;
+//     }
+//     head = pre;
 //   }
-//   head=pre;
-// }
+
 //   // reverse() {
 //   //       Node? pre = null;
 //   //       Node? curr = head;
@@ -477,16 +382,18 @@
 //   //       }
 //   //       head = pre;
 //   //   }
-//   showList(){
-//     Node? current=head;
-//     while(current!=null){
+
+//   showList() {
+//     Node? current = head;
+//     while (current != null) {
 //       print(current.data);
-//       current=current.next;
+//       current = current.next;
 //     }
 //   }
 // }
-// void main(){
-//   LinkedList list=LinkedList();
+
+// void main() {
+//   LinkedList list = LinkedList();
 //   list.add(10);
 //   list.add(20);
 //   list.add(30);
@@ -556,7 +463,7 @@
 //     }
 //     return false;
 //   }
-//   addAtBeginning(int data){ 
+//   addAtBeginning(int data){
 //     Node? newNode=Node(data);
 //     newNode.next=head;
 //     head=newNode;
@@ -578,7 +485,7 @@
 //     }
 //     }
 //    }
-  
+
 //   printList(){
 //     Node? current=head;
 //     while(current!=null){
@@ -601,54 +508,31 @@
 // }
 
 // ----------------------------------------------------------
- 
 
-// void main(){
-// binarySearch(arr, target) {
-//     int left = 0;
-//     int right = arr.length - 1;
-
-//     while (left <= right) {
-//         int mid = ((left + right) / 2).floor();
-//         if (arr[mid] == target) {
-//             return mid;
-//         }else if(arr[mid] < target) {
-//             left = mid + 1;
-           
-//         }else{
-//             right = mid - 1;
-           
-//         }
-//     }
-//     return -1;
-
-// }
-
-// }
 // =============================================================================
 
-void main(){
-binarySearch(arr,target){
-  int left=0;
-  int right=arr.length-1;
-  
-  while(left<=right){
-    int mid=((left+right)/2).floor();
-    if(arr[mid]==target){
-      return mid;
-    }else if(arr[mid]>target){
-      right= mid-1;
-    }else{
-      left=mid+1;
-    }
-  }
-  return -1;
-}
-List<int> arr = [1,2,3,4,5,6,7,8,9];
-int target = 8;
+// void main(){
+// binarySearch(arr,target){
+//   int left=0;
+//   int right=arr.length-1;
 
-print(binarySearch(arr, target));
-}
+//   while(left<=right){
+//     int mid=((left+right)/2).floor();
+//     if(arr[mid]==target){
+//       return mid;
+//     }else if(arr[mid]>target){
+//       right= mid-1;
+//     }else{
+//       left=mid+1;
+//     }
+//   }
+//   return -1;
+// }
+// List<int> arr = [3,4,5,6,7,8,9,10];
+// int target = 3;
+
+// print(binarySearch(arr, target));
+// }
 
 // ====================================================================
 
@@ -670,7 +554,6 @@ print(binarySearch(arr, target));
 //   }
 //   print(binarySearch([1,2,3,4,5], 4));
 // }
-
 
 // ============================================================
 
@@ -724,9 +607,11 @@ print(binarySearch(arr, target));
 //   list.add(10);
 //   list.add(20);
 //   list.add(30);
-//   //list.cycleOrNot();
-//   list.printList();
+//   list.cycleOrNot();
+//   // list.printList();
 // }
+
+// ----------------------------------------------------------
 
 // void main(){
 //   stringReverse(str){
@@ -739,10 +624,7 @@ print(binarySearch(arr, target));
 //   print(stringReverse('kevin'));
 // }
 
-
-
-
-
+// ------------------------------------------------------
 
 // void main(){
 //   List<int>arr=[1,2,3];
@@ -752,17 +634,16 @@ print(binarySearch(arr, target));
 //     }
 //     return arr[0]+sumofArray(arr.sublist(1));
 //   }
-  
+
 //   print(sumofArray(arr));
 // }
 
+// ------------------------------------------------------------
 
 // void main(){
 // String arr= "kevin";
 // print(arr.substring(1));
 // }
-
-
 
 // void main(){
 //   factorial(n){
@@ -773,8 +654,6 @@ print(binarySearch(arr, target));
 //   }
 //   print(factorial(4));
 // }
-
-
 
 // void main(){
 //   sumofArray(arr){
@@ -787,7 +666,6 @@ print(binarySearch(arr, target));
 //   print(sumofArray(arr));
 // }
 
-
 // void main(){
 //   String str='kevin';
 //   revString(str){
@@ -799,7 +677,6 @@ print(binarySearch(arr, target));
 //   print(revString(str));
 // }
 
-
 // void main(){
 //   revString(str){
 //     if(str.isEmpty){
@@ -810,8 +687,6 @@ print(binarySearch(arr, target));
 //   String str='kevin';
 //   print(revString(str));
 // }
-
-
 
 // void main(){
 //   sumofnElements(n){
@@ -823,7 +698,6 @@ print(binarySearch(arr, target));
 //   int n=5;
 //   print(sumofnElements(n));
 // }
-
 
 // sumofOddinArray(arr,index){
 // if(index>=arr.length){
@@ -840,225 +714,218 @@ print(binarySearch(arr, target));
 //   print(sumofOddinArray(arr,0));
 // }
 
-
-
 // ***********************************************************************************************
+// nw
 // LINKED LIST linked list
-// class Node{
+// class Node {
 //   int data;
 //   Node? next;
 //   Node(this.data);
 // }
-// class LinkedList{
+
+// class LinkedList {
 //   Node? head;
 //   Node? tail;
-//   add(data){
+
+//   add(data) {
 //     Node? newNode = Node(data);
-//     if(head==null){
-//       head=newNode;
-//       tail=newNode;
-//     }else{
-//       tail!.next=newNode;
-//       tail=newNode;
+//     if (head == null) {
+//       head = newNode;
+//       tail = newNode;
+//     } else {
+//       tail!.next = newNode;
+//       tail = newNode;
 //     }
 //   }
 
-//  void removeDup() {
-// if(head==null){
-//   print('no values');
-//   return;
-// }
-// Node? temp=head;
-// while(temp!=null && temp.next!=null){
-//   if(temp.data==temp.next!.data){
-//     temp.next=temp.next!.next;
-//   }else{
-//     temp=temp.next;
+//   void removeDup() {
+//     if (head == null) {
+//       print('no values');
+//       return;
+//     }
+//     Node? temp = head;
+//     while (temp != null && temp.next != null) {
+//       if (temp.data == temp.next!.data) {
+//         temp.next = temp.next!.next;
+//       } else {
+//         temp = temp.next;
+//       }
+//     }
 //   }
-// }
-// }
-  
-//   arraytoLinkedList(arr){
-// for(int i=0;i<arr.length;i++){
-//   add(arr[i]);
-// }
-// }
 
+//   arraytoLinkedList(arr) {
+//     for (int i = 0; i < arr.length; i++) {
+//       add(arr[i]);
+//     }
+//   }
 
-//   addAfter(afterData,data){
+//   addAfter(afterData, data) {
 //     Node? newNode = Node(data);
-//     Node? current= head;
-//     while(current!=null && current.data!=afterData){
-//       current=current.next;
+//     Node? current = head;
+//     while (current != null && current.data != afterData) {
+//       current = current.next;
 //     }
-//     newNode.next=current!.next;
-//     current.next=newNode;
-//     if(current==tail){
-//       tail=newNode;
+//     newNode.next = current!.next;
+//     current.next = newNode;
+//     if (current == tail) {
+//       tail = newNode;
 //     }
 //   }
 
-
-//   search(data){
-//     Node? current=head;
-//     while(current!=null){
-//       if(current.data==data){
+//   search(data) {
+//     Node? current = head;
+//     while (current != null) {
+//       if (current.data == data) {
 //         return true;
 //       }
-//       current=current.next;
-//       }
-//       return false;
+//       current = current.next;
+//     }
+//     return false;
 //   }
 
-//     delete(data){
-//     if(head!.data==data){
-//       head=head!.next;
-//       if(head==null){
-//         tail=null;
+//   delete(data) {
+//     if (head!.data == data) {
+//       head = head!.next;
+//       if (head == null) {
+//         tail = null;
 //       }
 //       return;
 //     }
 //     Node? current = head;
 //     Node? prev;
-//     while(current!=null && current.data!=data){
-//       prev=current;
+//     while (current != null && current.data != data) {
+//       prev = current;
 //       current = current.next;
 //     }
-//     if(current==null) return;
-//     prev!.next=current.next;
-//     if(prev.next==null){
-//       tail=prev;
+//     if (current == null) return;
+//     prev!.next = current.next;
+//     if (prev.next == null) {
+//       tail = prev;
 //     }
 //   }
 
-
-// middleValue(){
-//   Node?slow=head;
-//   Node?fast=head;
-//   Node?prev=null;
-//   while(fast!=null&&fast.next!=null){
-//     prev=slow;
-//     slow=slow!.next;
-//     fast=fast.next!.next;
+//   middleValue() {
+//     Node? slow = head;
+//     Node? fast = head;
+//     Node? prev = null;
+//     while (fast != null && fast.next != null) {
+//       prev = slow;
+//       slow = slow!.next;
+//       fast = fast.next!.next;
 //     }
-//     if(prev!=null){
-//       prev.next=slow!.next;
+//     if (prev != null) {
+//       prev.next = slow!.next;
 //     }
-// }
+//   }
 
-
-// insertBefore(beforeData,data){
-// Node? newNode = Node(data);
-// Node? current = head;
-// if(current==null){
-//   return 'List is empty';
-// }
-// if(current.data==beforeData){
-//   newNode.next=current;
-//   head=newNode;
-//   return;
-// }
-// Node? prev;
-// while(current !=null && current.data!=beforeData){
-//  prev = current;
-// current=current.next;
-// }
-// if(current!=null){
-// prev!.next=newNode;
-// newNode.next=current;
-// }else{
-//   print('Data is not found');
-// }
-// }
-
-// addAtBeginning(data){
+//   insertBefore(beforeData, data) {
 //     Node? newNode = Node(data);
-//     newNode.next=head;
-//     head=newNode;
+//     Node? current = head;
+//     if (current == null) {
+//       return 'List is empty';
+//     }
+//     if (current.data == beforeData) {
+//       newNode.next = current;
+//       head = newNode;
+//       return;
+//     }
+//     Node? prev;
+//     while (current != null && current.data != beforeData) {
+//       prev = current;
+//       current = current.next;
+//     }
+//     if (current != null) {
+//       prev!.next = newNode;
+//       newNode.next = current;
+//     } else {
+//       print('Data is not found');
+//     }
 //   }
 
-// printList(){
-//     Node? current=head;
-//     while(current!=null){
+//   addAtBeginning(data) {
+//     Node? newNode = Node(data);
+//     newNode.next = head;
+//     head = newNode;
+//   }
+
+//   printList() {
+//     Node? current = head;
+//     while (current != null) {
 //       print(current.data);
-//       current=current.next;
+//       current = current.next;
 //     }
 //   }
 // }
-// void main(){
-//   LinkedList list=LinkedList();
+
+// void main() {
+//   LinkedList list = LinkedList();
+//   list.add(30);
 //   list.add(10);
 //   list.add(20);
 //   list.add(30);
 //   list.add(30);
 //   list.add(40);
-//   List<int>arr=[1,2,3];
-// list.removeDup();
+//   List<int> arr = [1, 2, 3];
+//   list.removeDup();
 // // print(list.search(20));
 //   // list.delete(30);
 //   // list.add(50);
 //   // list.middleValue();
-  
-//   list.arraytoLinkedList(arr);
+
+//   // list.arraytoLinkedList(arr);
 //   // list.insertBefore(30, 25);
-// // list.addAtBeginning(5);
+//     // list.addAtBeginning(5);
 //   // list.addAfter(10, 15);
 //   list.printList();
 // }
 
 // *************************************************************************************************
-  
-  
-  
-
-
-
-
-
-
-
 
 // ############################################################################
 
 // double linked list
 
-// class Node{
+// class Node {
 //   Node? prev;
 //   Node? next;
 //   int data;
 //   Node(this.data);
 // }
-// class DLinkedList{ 
+
+// class DLinkedList {
 //   Node? head;
 //   Node? tail;
-//   add(data){
+
+//   add(data) {
 //     Node? newNode = Node(data);
-//     if(head==null){
-//       head=newNode;
-//       tail=newNode;
-//     }else{
-//       tail!.next=newNode;
-//       newNode.prev=tail;
-//       tail=newNode;
+//     if (head == null) {
+//       head = newNode;
+//       tail = newNode;
+//     } else {
+//       tail!.next = newNode;
+//       newNode.prev = tail;
+//       tail = newNode;
 //     }
 //   }
-//   display(){
+
+//   display() {
 //     Node? temp = head;
-//     while(temp!=null){
+//     while (temp != null) {
 //       print(temp.data);
-//       temp=temp.next;
+//       temp = temp.next;
 //     }
 //   }
-//   displayReverse(){
-//     Node? temp=tail;
-//     while(temp!=null){
+
+//   displayReverse() {
+//     Node? temp = tail;
+//     while (temp != null) {
 //       print(temp.data);
-//       temp=temp.prev;
+//       temp = temp.prev;
 //     }
 //   }
 // }
 
-// void main(){
+// void main() {
 //   DLinkedList list = DLinkedList();
 //   list.add(10);
 //   list.add(20);
@@ -1070,12 +937,13 @@ print(binarySearch(arr, target));
 // ====================================================================================
 
 // String reversed
-// reverse(str){
-// List<String>words = str.split(' ');
-// String reversed = words.map((e) => e.split('').reversed.join()).join(' ');
-// return reversed;
+// reverse(str) {
+//   List<String> words = str.split(' ');
+//   String reversed = words.map((e) => e.split('').reversed.join()).join(' ');
+//   return reversed;
 // }
-// void main(){
+
+// void main() {
 //   String str = "Kevin Jobi";
 //   print(reverse(str));
 // }
@@ -1098,14 +966,12 @@ print(binarySearch(arr, target));
 // void main() {
 //   String input = "hihihello";
 //   String pattern = "hi";
-  
+
 //   int occurrences = countOccurrences(input, pattern);
 //   print("Number of occurrences of '$pattern': $occurrences");
 // }
 
-
 // =================================================================================
-
 
 // ensureFullstop(str){
 //   if(str.endsWith('.')){
@@ -1118,7 +984,6 @@ print(binarySearch(arr, target));
 //   String str='kevin';
 //   print(ensureFullstop(str));
 // }
-
 
 // =========================================
 
@@ -1135,18 +1000,7 @@ print(binarySearch(arr, target));
 //   print(reverse(str));
 // }
 
-
-
-
-
-
-
-
-
-
-
-
-// =================================
+// ================================= (evin) +k, (vin) +e, (in) +v, (n)+i, ('')+n   nivek
 
 // binarySearch(arr,target){
 // int left=0;
@@ -1169,15 +1023,12 @@ print(binarySearch(arr, target));
 //   print(binarySearch(arr, 4));
 // }
 
-
-
 // void main(){
 //   List<int>arr=[1,4,3,2,5];
 //   arr.sort();
 
 // print(arr[arr.length-2]);
 // }
-
 
 //  binarySearch(arr,target){
 //     int left=0;
@@ -1205,11 +1056,11 @@ print(binarySearch(arr, target));
 // void bubbleSort(List<int> arr) {
 //   int n = arr.length;
 //   bool swapped;
-  
+
 //   for (int i = 0; i < n - 1; i++) {
 //     swapped = false;
-    
-//     for (int j = 0; j < n - i - 1; j++) { 
+
+//     for (int j = 0; j < n - i - 1; j++) {
 //       if (arr[j] > arr[j + 1]) {
 //         // Swap arr[j] and arr[j + 1]
 //         int temp = arr[j];
@@ -1237,14 +1088,10 @@ print(binarySearch(arr, target));
 //   bubbleSort(arr);
 //   print('Sorted array: ');
 //   printArray(arr);
+//   // print(arr);
 // }
 
-
-
-
 // ---------------------------------------------------------------------------------------------
-
-
 
 // bubbleSort(List<int> arr){
 //   for(int i=0;i<arr.length;i++){
@@ -1256,10 +1103,10 @@ print(binarySearch(arr, target));
 //         arr[j+1] = temp;
 
 //         sorted=false;
-        
+
 //       }
 //     }
-    
+
 //     if(sorted==true){
 //       break;
 //     }
@@ -1269,9 +1116,8 @@ print(binarySearch(arr, target));
 // void main(){
 //   List<int>arr=[12,11,13,5,6] ;
 //   bubbleSort(arr);
- 
-// }
 
+// }
 
 // bubbleSort(List<int>nums){
 // for(int i=0;i<nums.length-1;i++){
@@ -1295,27 +1141,25 @@ print(binarySearch(arr, target));
 //   bubbleSort(nums);
 // }
 
+// ------------------------------------------------
 
-
-
-// void insertionSort(List <int> arr){
-// for(int i=1;i<arr.length;i++){
-//   int key=arr[i];
-//   int j= i-1;
-//   while(j>=0 && arr[j]>key){
-//     arr[j+1]=arr[j];
-//     j=j-1;
+// void insertionSort(List<int> arr) {
+//   for (int i = 1; i < arr.length; i++) {
+//     int key = arr[i];
+//     int j = i - 1;
+//     while (j >= 0 && arr[j] > key) {
+//       arr[j + 1] = arr[j];
+//       j = j - 1;
+//     }
+//     arr[j + 1] = key;
 //   }
-//   arr[j+1]=key;
 // }
-// }
-// void main(){
-//   List <int> arr=[12,11,13,5,6];
+
+// void main() {
+//   List<int> arr = [12, 11, 13, 5, 6];
 //   insertionSort(arr);
 //   print(arr);
 // }
-
-
 
 // void insertionSort(List<int>arr){
 // for(int i=1;i<arr.length;i++){
@@ -1334,7 +1178,7 @@ print(binarySearch(arr, target));
 //   print(arr);
 // }
 
-// QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ 
+// QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
 
 // // Quick sort
 // List<int> quickSort(List<int> numbers) {
@@ -1343,6 +1187,7 @@ print(binarySearch(arr, target));
 //   }
 
 //   int pivot = numbers[numbers.length ~/ 2]; // Pick the middle element as pivot
+
 //   List<int> left = []; // Smaller numbers
 //   List<int> right = []; // Bigger numbers
 
@@ -1364,9 +1209,7 @@ print(binarySearch(arr, target));
 //   print(quickSort(numbers)); // [1, 2, 3, 5, 7, 8]
 // }
 
-
-
-// MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM 
+// MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 
 // Merge Sort
 
@@ -1415,85 +1258,92 @@ print(binarySearch(arr, target));
 //   print(mergeSort(numbers)); // [1, 2, 3, 5, 7, 8]
 // }
 
-
 // ==========================================================
 
 // Stack
-// class IntStack<int>{
-//   List<int>stack=[];
-// push(int value){
-//   stack.add(value);
-// }
-// pop(){
-//   if(stack.isEmpty) return'There is no value';
-//   return stack.removeLast();
-// }
-// peek(){
-//   if(stack.isEmpty) return 'no values';
-//   return stack.last;
-// }
-// isEmpty(){
-//   return stack.isEmpty;
-// }
-// List<int>rev=[];
-// popRev(){
-//   rev.add(stack.removeLast());
-//   return rev;
+// class IntStack<int> {
+//   List<int> stack = [];
+//   push(int value) {
+//     stack.add(value);
+//   }
+
+//   pop() {
+//     if (stack.isEmpty) return 'There is no value';
+//     return stack.removeLast();
+//   }
+
+//   peek() {
+//     if (stack.isEmpty) return 'no values';
+//     return stack.last;
+//   }
+
+//   isEmpty() {
+//     return stack.isEmpty;
+//   }
+
+//   List<int> rev = [];
+//   popRev() {
+//     rev.add(stack.removeLast());
+//     return rev;
+//   }
 // }
 
-// }
-// void main(){
-// IntStack stack=IntStack();
-// stack.push(10);
-// stack.push(20);
-// stack.push(30);
-// //print(stack.pop());
+// void main() {
+//   IntStack stack = IntStack();
+//   stack.push(10);
+//   stack.push(20);
+//   stack.push(30);
+//   print(stack.pop());
 
 // //print(stack.isEmpty());
-// print(stack.popRev());
+// // print(stack.popRev());
 // // print(stack.peek());
 // }
 
 // ---------------------------------------------------------------------------------------------
 // stack
 
-// class IntStack{
-//   List<int>stack=[];
-//   push(value){
+// class IntStack {
+//   List<int> stack = [];
+//   push(value) {
 //     stack.add(value);
 //   }
-//   pop(){
-//     if(stack.isEmpty) return'no value';
+
+//   pop() {
+//     if (stack.isEmpty) return 'no value';
 //     return stack.removeLast();
 //   }
-//   peak(){
-//     if(stack.isEmpty) return'no value';
+
+//   peak() {
+//     if (stack.isEmpty) return 'no value';
 //     return stack.last;
 //   }
-//   isEmpty(){
+
+//   isEmpty() {
 //     return stack.isEmpty;
 //   }
-//   List<int>rev=[];
-//   poprev(){
-//     while(!isEmpty()){
+
+//   List<int> rev = [];
+//   poprev() {
+//     while (!isEmpty()) {
 //       rev.add(pop());
 //     }
 //   }
-// sum(){
-//   int sum=0;
-//   for(var element in stack){
-    
-//     sum +=element;
+
+//   sum() {
+//     int sum = 0;
+//     for (var element in stack) {
+//       sum += element;
+//     }
+//     return sum;
 //   }
-//   return sum;
 // }
 
-// }
-// void main(){
-// IntStack stack=IntStack();
-// stack.push(19);
-// stack.push(2);
-// stack.push(3);
+// void main() {
+//   IntStack stack = IntStack();
+//   stack.push(19);
+//   stack.push(2);
+//   stack.push(3);
 // // print(stack.pop());
 // // print(stack.pop());
 // // // print(stack.pop());
@@ -1503,13 +1353,8 @@ print(binarySearch(arr, target));
 // // print(stack.poprev());
 // // print(stack.poprev());
 // // print(stack.rev);
-// print(stack.sum());
-
+//   print(stack.sum());
 // }
-
-
-
-
 
 // ================================================================
 // Queue
@@ -1543,17 +1388,17 @@ print(binarySearch(arr, target));
 //     return _queue.isEmpty;
 //   }
 // }
+
 // void main() {
 //   Queue<int> queue = Queue<int>();
 //   queue.enqueue(10); // Add 10 to the queue
 //   queue.enqueue(20); // Add 20 to the queue
 //   queue.enqueue(30); // Add 30 to the queue
 
-//   print(queue.dequeue());  // Outputs: 10 (first in, first out)
-//   print(queue.peek());     // Outputs: 20 (front of the queue)
-//   print(queue.isEmpty());  // Outputs: false (queue still has items)
+//   print(queue.dequeue()); // Outputs: 10 (first in, first out)
+//   // print(queue.peek()); // Outputs: 20 (front of the queue)
+//   // print(queue.isEmpty()); // Outputs: false (queue still has items)
 // }
-
 
 // HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
 
@@ -1571,27 +1416,27 @@ print(binarySearch(arr, target));
 //   void insert(K key, V value) {
 //     final index = _hash(key);
 //     final bucket = _buckets[index];
-    
+
 //     for (var i = 0; i < bucket.length; i++) {
 //       if (bucket[i].key == key) {
 //         bucket[i] = MapEntry(key, value);
 //         return;
 //       }
 //     }
-    
+
 //     bucket.add(MapEntry(key, value));
 //   }
 
 //   V? get(K key) {
 //     final index = _hash(key);
 //     final bucket = _buckets[index];
-    
+
 //     for (var entry in bucket) {
 //       if (entry.key == key) {
 //         return entry.value;
 //       }
 //     }
-    
+
 //     return null;
 //   }
 
@@ -1603,21 +1448,19 @@ print(binarySearch(arr, target));
 
 // void main() {
 //   var hashTable = HashTable<String, int>();
-  
+
 //   hashTable.insert('apple', 5);
 //   hashTable.insert('banana', 7);
 //   hashTable.insert('orange', 3);
-  
+
 //   print(hashTable.get('apple'));  // Output: 5
 //   print(hashTable.get('grape'));  // Output: null
-  
+
 //   hashTable.remove('banana');
 //   print(hashTable.get('banana')); // Output: null
 // }
 
-
 // ########################################################################################
-
 
 // jasir
 // class HashTable {
@@ -1669,7 +1512,6 @@ print(binarySearch(arr, target));
 //   // // // Output: []
 //   hashtable.displayall();
 // }
-
 
 // -----------------------------------------------------------
 
@@ -1757,15 +1599,14 @@ print(binarySearch(arr, target));
 //   // table.print1();
 // }
 
-
 // ---------------------------------------------------------------------------------
-  // HashTable(this.size) {
-  //   // Initialize the table as a list of empty lists
-  //   table = [];
-  //   for (int i = 0; i < size; i++) {
-  //     table.add([]);
-  //   }
-  // }
+// HashTable(this.size) {
+//   // Initialize the table as a list of empty lists
+//   table = [];
+//   for (int i = 0; i < size; i++) {
+//     table.add([]);
+//   }
+// }
 // ---------------------------------------------------------------------------------
 //   int hashing(String key) {
 //     int hashedKey = 0;
@@ -1774,7 +1615,6 @@ print(binarySearch(arr, target));
 //     }
 //     return hashedKey % size;
 //   }
-
 
 // class HashTable{
 //   List<List<List<dynamic>>> table;
@@ -1822,7 +1662,7 @@ print(binarySearch(arr, target));
 //   for(int i=0;i<bucket.length;i++){
 //     if(bucket[i][0]==key){
 //       bucket.removeAt(i);
-      
+
 //     }
 //   }
 // }
@@ -1840,39 +1680,33 @@ print(binarySearch(arr, target));
 //   table.display();
 // }
 
-
-
 // Selection sort
 
-// void selectionSort(List<int> nums) {
-//   for (int i = 0; i < nums.length - 1; i++) {
-//     int minIndex = i;
-//     // Find the minimum element in the unsorted portion
-//     for (int j = i + 1; j < nums.length; j++) {
-//       if (nums[j] < nums[minIndex]) {
-//         minIndex = j;
-//       }
-//     }
-//     // Swap the found minimum element with the first element of the unsorted portion
-//     if (minIndex != i) {
-//       int temp = nums[i];
-//       nums[i] = nums[minIndex];
-//       nums[minIndex] = temp;
-//     }
-    
-//   }
-//   print(nums);
-// }
+void selectionSort(List<int> nums) {
+  for (int i = 0; i < nums.length - 1; i++) {
+    int minIndex = i;
+    // Find the minimum element in the unsorted portion
+    for (int j = i + 1; j < nums.length; j++) {
+      if (nums[j] < nums[minIndex]) {
+        minIndex = j;
+      }
+    }
+    // Swap the found minimum element with the first element of the unsorted portion
+    if (minIndex != i) {
+      int temp = nums[i];
+      nums[i] = nums[minIndex];
+      nums[minIndex] = temp;
+    }
+  }
+  print(nums);
+}
 
-// void main() {
-//   List<int> nums = [8,3,5,1,7,2];
-//   selectionSort(nums); // Outputs: [1, 2, 3, 4, 5]
-// }
-
-
+void main() {
+  List<int> nums = [8, 3, 5, 1, 7, 2];
+  selectionSort(nums); // Outputs: [1, 2, 3, 4, 5]
+}
 
 // ---------------------------------------------------------------------------------------------
-
 
 // class FixedSizeStack<T> {
 //   final int _capacity;  // Maximum capacity of the stack
@@ -1940,9 +1774,6 @@ print(binarySearch(arr, target));
 //   stack.pop();     // Underflow! Stack is already empty
 // }
 
-
-
-
 // int hashing(String key) {
 // int hashedKey = 1;
 // // for (int i = 0; i < key.length; i++) {
@@ -1969,7 +1800,7 @@ print(binarySearch(arr, target));
 // }
 // return hashedKey % size;
 // }
-// void resize() { 
+// void resize() {
 // int newSize = size * 2;
 // List<List<List<dynamic>>> newTable = List.generate(newSize, (_) => []);
 // for (var bucket in table) {
@@ -2017,7 +1848,7 @@ print(binarySearch(arr, target));
 // }
 // }
 // }
-// void remove(String key) { 
+// void remove(String key) {
 // int index = hashing(key);
 // List<List<dynamic>> bucket = table[index];
 // if (bucket.isEmpty) {
@@ -2062,10 +1893,10 @@ print(binarySearch(arr, target));
 //   table.set("age", 26);
 //   table.set("bike", "splendor");
 //   table.set("car", "fortuner");
-  
+
 //   // Check if 'name' is retrieved correctly
 //   print(table.get('name'));
-  
+
 //   // Optionally, display the entire hashtable to inspect its state
 //   table.display();
 // }
@@ -2143,7 +1974,7 @@ print(binarySearch(arr, target));
 //     print("Current size: $size"); // Debug print
 //     for (int i = 0; i < table.length; i++) {
 //       if (table[i].isNotEmpty) {
-//         print('Bucket $i: ${table[i]}');
+//         print('table $i: ${table[i]}');
 //       }
 //     }
 //   }
@@ -2153,11 +1984,12 @@ print(binarySearch(arr, target));
 //   Hashtable table = Hashtable(3);
 //   table.set("name", 'kevin');
 //   table.set("age", 26);
-//   table.set("bike", "splendor");
-//   table.set("car", "fortuner");
-  
-//   print("Result of get('name'): ${table.get('name')}");
-//   table.display();
+//   // table.set("bike", "splendor");
+//   // table.set("car", "fortuner");
+
+//   // print("Result of get('name'): ${table.get('name')}");
+//   // table.display();
+//   print(table.table);
 // }
 
 // ---------------------------------------------------------------------------
@@ -2236,8 +2068,6 @@ print(binarySearch(arr, target));
 //   stack.pop();
 //   stack.display(); // Should show: 20 -> 10
 // }
-
-
 
 // --------------------------------------------------------------------
 
@@ -2339,10 +2169,9 @@ print(binarySearch(arr, target));
 //   print(hashTable.get('age'));  // Output: null
 // }
 
-
 // ---------------------------------------------------------
 
-// Stack using queue
+// Stack using queues
 // import 'dart:collection';
 
 // class StackUsingQueues {
@@ -2407,17 +2236,15 @@ print(binarySearch(arr, target));
 
 // void main() {
 //   StackUsingQueues stack = StackUsingQueues();
-  
+
 //   stack.push(10);
 //   stack.push(20);
 //   stack.push(30);
-//   stack.push(300);
-//   stack.push(90);
 
 //   print("Top element: ${stack.top()}"); // Output: Top element: 30
 
 //   print("Popped element: ${stack.pop()}"); // Output: Popped element: 30
-//   print("Popped element: ${stack.pop()}"); // Output: Popped element: 
+//   print("Popped element: ${stack.pop()}"); // Output: Popped element:
 
 //   print("Top element: ${stack.top()}"); // Output: Top element: 20
 // }
@@ -2494,57 +2321,112 @@ print(binarySearch(arr, target));
 //    print(queue.dequeue());
 // }
 
-
 // --------------------------------------------
 
+// nw
 // Stack using LinkedList
-// class Node{
+// class Node {
 //   int data;
 //   Node? next;
 //   Node(this.data);
 // }
-// class Stack{
+
+// class Stack {
 //   Node? top;
 
-//   bool isEmpty(){
+//   bool isEmpty() {
 //     return top == null;
 //   }
 
-//   push(int data){
+//   push(int data) {
 //     Node newNode = Node(data);
 //     newNode.next = top;
 //     top = newNode;
 //   }
-//   pop(){
-//     if(isEmpty()){
+
+//   pop() {
+//     if (isEmpty()) {
 //       return null;
 //     }
 //     int poppedValue = top!.data;
 //     top = top!.next;
 //     print('$poppedValue is poped out');
 //   }
-//   peak(){
+
+//   peak() {
 //     int topValue = top!.data;
-//     if(isEmpty()){
+//     if (isEmpty()) {
 //       print('Stack is empty');
 //       return null;
 //     }
 //     return topValue;
 //   }
-//   display(){
+
+//   display() {
 //     Node? current = top;
-//     while(current != null){
+//     while (current != null) {
 //       print(current.data);
-//        current = current.next;
+//       current = current.next;
 //     }
 //   }
 // }
-// void main(){
+
+// void main() {
 //   Stack stack = Stack();
 //   stack.push(10);
 //   stack.push(20);
 //   stack.push(30);
 //   // stack.pop();
-//   print(stack.peak());
-//   // stack.display();
+//   // print(stack.peak());
+//   stack.display();
+// }
+
+
+// ----------------------------------------------------
+
+
+// void main() {
+//   List<int> arr = [1, 2, 3, 4, 5, 6, 7, 8];
+//   int target = 3;
+//   print(binarySearch(target, arr));
+// }
+
+// binarySearch(int target, List<int> arr) {
+//   int left = 0;
+//   int right = arr.length - 1;
+
+//   while (left <= right) {
+//     int mid = ((left + right) / 2).floor();
+//     if (target == arr[mid]) {
+//       return mid;
+//     } else if (target < arr[mid]) {
+//       right = mid - 1;
+//     } else {
+//       left = mid + 1;
+//     }
+//   }
+//   return -1;
+// }
+
+// void main(){
+// binarySearch(arr,target){
+//   int left=0;
+//   int right=arr.length-1;
+
+//   while(left<=right){
+//     int mid=((left+right)/2).floor();
+//     if(arr[mid]==target){
+//       return mid;
+//     }else if(arr[mid]>target){
+//       right= mid-1;
+//     }else{
+//       left=mid+1;
+//     }
+//   }
+//   return -1;
+// }
+// List<int> arr = [1,2,3,4,5,6,7,8,9];
+// int target = 8;
+
+// print(binarySearch(arr, target));
 // }

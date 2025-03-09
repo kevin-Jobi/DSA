@@ -41,7 +41,7 @@
 //     print('$node->Root');
 //   else
 //     print('$node->$parent');
-    
+
 //   // Using DFS
 //   for (int cur in arr[node]) {
 //     if (cur != parent)
@@ -53,10 +53,10 @@
 // void printChildren(int Root, List<List<int>> arr) {
 //   // Queue for the BFS
 //   Queue<int> q = Queue<int>();
-  
+
 //   // pushing the root
 //   q.add(Root);
-  
+
 //   // visit array to keep track of nodes that have been visited
 //   List<int> vis = List.filled(arr.length, 0);
 //   // BFS
@@ -88,7 +88,7 @@
 // void printDegrees(int Root, List<List<int>> arr) {
 //   for (int i = 1; i < arr.length; i++) {
 //     print('$i: ');
-    
+
 //     // Root has no parent, thus, its degree is equal to
 //     // the edges it is connected to
 //     if (i == Root)
@@ -97,7 +97,6 @@
 //       print('${arr[i].length - 1}');
 //   }
 // }
-
 
 // ------------------------------------------------------------------------------------
 
@@ -144,24 +143,24 @@
 //     }
 //   }
 
-  // void search(int value) {
-  //   if (isEmpty()) {
-  //     print("The tree is empty");
-  //     return;
-  //   }
-  //   Node? temp = root;
-  //   while (temp != null) {
-  //     if (temp.value == value) {
-  //       print(true);
-  //       return;
-  //     } else if (value < temp.value) {
-  //       temp = temp.left;
-  //     } else {
-  //       temp = temp.right;
-  //     }
-  //   }
-  //   print(false);
-  // }
+// void search(int value) {
+//   if (isEmpty()) {
+//     print("The tree is empty");
+//     return;
+//   }
+//   Node? temp = root;
+//   while (temp != null) {
+//     if (temp.value == value) {
+//       print(true);
+//       return;
+//     } else if (value < temp.value) {
+//       temp = temp.left;
+//     } else {
+//       temp = temp.right;
+//     }
+//   }
+//   print(false);
+// }
 
 //   int? max([Node? root]) {
 //     root ??= this.root;
@@ -284,13 +283,6 @@
 //   print(tree.isBST());
 // }
 
-
-
-
-
-
-
-
 // class Node {
 //   int value;
 //   Node? left;
@@ -400,7 +392,6 @@
 //   }
 // }
 
-
 //   void postOrderTraversal([Node? root]) {
 //     root ??= this.root;
 //     if (root != null) {
@@ -494,12 +485,8 @@
 //   // print(tree.isBST());
 // }
 
-
-
-
 // ----------------------------------------------------------
 // sahal
-
 
 class Node {
   int data;
@@ -512,7 +499,7 @@ class Node {
 class BST {
   Node? root;
 
-  BST();
+  // BST();
 
   void insert(int data) {
     Node newNode = Node(data);
@@ -524,7 +511,7 @@ class BST {
   }
 
   void insertNode(Node root, Node newNode) {
-    if (root.data > newNode.data ) {
+    if (root.data > newNode.data) {
       if (root.left == null) {
         root.left = newNode;
       } else {
@@ -539,25 +526,26 @@ class BST {
     }
   }
 
-  // bool contains(Node? root, int target) {
-  //   if (root == null) {
-  //     return false;
-  //   }
-  //   if (root.data == target) {
-  //     return true;
-  //   } else if (root.data > target) {
-  //     return contains(root.left, target);
-  //   } else {
-  //     return contains(root.right, target);
-  //   }
-  // }
+  bool contains(Node? root, int target) {
+    if (root == null) {
+      return false;
+    }
+    if (root.data == target) {
+      return true;
+    } else if (root.data > target) {
+      return contains(root.left, target);
+    } else {
+      return contains(root.right, target);
+    }
+  }
 
-    void search(int value) {
+  void search(int value) {
     if (root == null) {
       print("The tree is empty");
       return;
     }
     Node? temp = root;
+
     while (temp != null) {
       if (temp.data == value) {
         print(true);
@@ -578,6 +566,7 @@ class BST {
       preorder(root.left, list);
       preorder(root.right, list);
     }
+
     return list;
   }
 
@@ -642,7 +631,7 @@ class BST {
     return root;
   }
 
-    // Height function
+  // Height function
   int height(Node? root) {
     if (root == null) {
       return -1;
@@ -651,27 +640,26 @@ class BST {
     int rightHeight = height(root.right);
     return 1 + (leftHeight > rightHeight ? leftHeight : rightHeight);
   }
-
 }
 
-void main() { 
+void main() {
   BST bst = BST();
   bst.insert(10);
-  bst.insert(5);
-  bst.insert(6);
-  bst.insert(15);
-  bst.insert(12);
   bst.insert(20);
+  bst.insert(15);
+  // bst.insert(15);
+  // bst.insert(12);
+  // bst.insert(20);
   // bst.insert(4);
-
+ bst.root = bst.deleteNode(bst.root, 10);
+ bst.insert(25);
   // print(bst.max(bst.root));
-  // print(bst.min(bst.root!.right!.right));
-  // print(bst.preorder(bst.root));
-  //  bst.deleteNode(bst.root, 15);
-  // bst.search(8);
-   print(bst.preorder(bst.root)); // Output the preorder traversal
+  // print(bst.min(bst.root));
+  print(bst.preorder(bst.root));
+  print(bst.contains(bst.root, 5));
+  // bst.search(10);
+  //  print(bst.preorder(bst.root)); // Output the preorder traversal
   // print(bst.inorder(bst.root)); // Output the inorder traversal
   // print(bst.postorder(bst.root)); // Output the postorder traversal
   // print(bst.height(bst.root));
-
 }
