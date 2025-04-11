@@ -75,6 +75,7 @@ class LinkedList {
       if(current.data == data){
         return true;
       }
+      current = current.next;
     }
     return false;
   }
@@ -120,7 +121,7 @@ class LinkedList {
 
   reverse() {
     Node? curr = head;
-    Node? prev = null;
+    Node? prev;
     while(curr!=null){
       Node? cnex = curr.next;
       curr.next = prev;
@@ -145,6 +146,7 @@ void main() {
   list.add(30);
   // list.reverse();
   // list.delete(30);
+  print(list.search(20));
   list.addAtBeginning(5);
   list.addAfter(20, 25);
   list.printList();

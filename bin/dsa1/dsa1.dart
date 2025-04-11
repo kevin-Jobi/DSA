@@ -866,7 +866,7 @@
 //   list.add(30);
 //   list.add(40);
 //   List<int> arr = [1, 2, 3];
-//   list.removeDup();
+//   // list.removeDup();
 // // print(list.search(20));
 //   // list.delete(30);
 //   // list.add(50);
@@ -1682,29 +1682,29 @@
 
 // Selection sort
 
-void selectionSort(List<int> nums) {
-  for (int i = 0; i < nums.length - 1; i++) {
-    int minIndex = i;
-    // Find the minimum element in the unsorted portion
-    for (int j = i + 1; j < nums.length; j++) {
-      if (nums[j] < nums[minIndex]) {
-        minIndex = j;
-      }
-    }
-    // Swap the found minimum element with the first element of the unsorted portion
-    if (minIndex != i) {
-      int temp = nums[i];
-      nums[i] = nums[minIndex];
-      nums[minIndex] = temp;
-    }
-  }
-  print(nums);
-}
+// void selectionSort(List<int> nums) {
+//   for (int i = 0; i < nums.length - 1; i++) {
+//     int minIndex = i;
+//     // Find the minimum element in the unsorted portion
+//     for (int j = i + 1; j < nums.length; j++) {
+//       if (nums[j] < nums[minIndex]) {
+//         minIndex = j;
+//       }
+//     }
+//     // Swap the found minimum element with the first element of the unsorted portion
+//     if (minIndex != i) {
+//       int temp = nums[i];
+//       nums[i] = nums[minIndex];
+//       nums[minIndex] = temp;
+//     }
+//   }
+//   print(nums);
+// }
 
-void main() {
-  List<int> nums = [8, 3, 5, 1, 7, 2];
-  selectionSort(nums); // Outputs: [1, 2, 3, 4, 5]
-}
+// void main() {
+//   List<int> nums = [8, 3, 5, 1, 7, 2];
+//   selectionSort(nums); // Outputs: [1, 2, 3, 4, 5]
+// }
 
 // ---------------------------------------------------------------------------------------------
 
@@ -2196,7 +2196,7 @@ void main() {
 
 //     // The last element in q1 is the top of the stack
 //     int topElement = q1.removeFirst();
-
+    
 //     // Swap q1 and q2, so q1 will again hold the elements
 //     Queue<int> temp = q1;
 //     q1 = q2;
@@ -2241,12 +2241,13 @@ void main() {
 //   stack.push(20);
 //   stack.push(30);
 
-//   print("Top element: ${stack.top()}"); // Output: Top element: 30
+//   // print("Top element: ${stack.top()}"); // Output: Top element: 30
 
 //   print("Popped element: ${stack.pop()}"); // Output: Popped element: 30
-//   print("Popped element: ${stack.pop()}"); // Output: Popped element:
+//   // print("Popped element: ${stack.pop()}"); // Output: Popped element:
 
-//   print("Top element: ${stack.top()}"); // Output: Top element: 20
+//   // print("Top element: ${stack.top()}"); // Output: Top element: 20
+  
 // }
 
 // ---------------------------------------------
@@ -2312,13 +2313,13 @@ void main() {
 
 //   // Dequeue and display
 //   print(queue.dequeue()); // Output: 10
-//   queue.enqueue(40);
-//   // print(queue.peek());    // Output: 20 (peek without removing)
-//   print(queue.dequeue()); // Output: 20
-//   // print(queue.isEmpty()); // Output: false
-//   print(queue.dequeue()); // Output: 30
-//   // print(queue.isEmpty()); // Output: true
-//    print(queue.dequeue());
+//   // queue.enqueue(40);
+//   // // print(queue.peek());    // Output: 20 (peek without removing)
+//   // print(queue.dequeue()); // Output: 20
+//   // // print(queue.isEmpty()); // Output: false
+//   // print(queue.dequeue()); // Output: 30
+//   // // print(queue.isEmpty()); // Output: true
+//   //  print(queue.dequeue());
 // }
 
 // --------------------------------------------

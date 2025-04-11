@@ -102,6 +102,7 @@ void main() {
   // graph.addEdge('B', 'E', bidirectional: true);
 
   print("Graph before deleting vertex:");
+  // graph.deleteEdge('A','B');
   print(graph.adjacencyList);
 
   // graph.deleteVertex('A');
@@ -110,5 +111,5 @@ void main() {
   // print(graph.adjacencyList);
 
   print("BFS traversal from vertex 'A': ${graph.bfs('A')}");
-  // print("DFS traversal from vertex 'A': ${graph.dfs('A')}");
+  print("DFS traversal from vertex 'A': ${graph.dfs('A')}");
 }

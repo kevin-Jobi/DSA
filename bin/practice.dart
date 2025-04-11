@@ -595,82 +595,180 @@
 
 // ---------------------------------------------
 
-// class Hashtable{
+// class Hashtable {
 //   int size;
-//   List<List<List<dynamic>>>table;
-//   Hashtable(this.size):table=List.generate(size, (_) =>[]);
-//   hashing(String key){
-//     int hashedKey=0;
-//     for(int i=0;i<key.length;i++){
-//       hashedKey +=key.codeUnitAt(i);
+//   List<List<List<dynamic>>> table;
+//   Hashtable(this.size) : table = List.generate(size, (_) => []);
+//   hashing(String key) {
+//     int hashedKey = 0;
+//     for (int i = 0; i < key.length; i++) {
+//       hashedKey += key.codeUnitAt(i);
 //     }
-//     return hashedKey%size;
+//     return hashedKey % size;
 //   }
-//   set(String key,dynamic value){
+
+//   set(String key, dynamic value) {
 //     int index = hashing(key);
 //     List<List<dynamic>> bucket = table[index];
-//     for(int i = 0;i<bucket.length;i++){
-//       if(bucket[i][0]==key){
+//     for (int i = 0; i < bucket.length; i++) {
+//       if (bucket[i][0] == key) {
 //         bucket[i][1] = value;
 //       }
 //     }
-//     bucket.add([key,value]);
+//     bucket.add([key, value]);
 //   }
-//   get(String key){
+
+//   get(String key) {
 //     int index = hashing(key);
 //     List<List<dynamic>> bucket = table[index];
-//     for(int i =0;i<bucket.length;i++){
-//       if(bucket[i][0]==key){
+//     for (int i = 0; i < bucket.length; i++) {
+//       if (bucket[i][0] == key) {
 //         return bucket[i][1];
 //       }
 //     }
 //   }
 
-//   remove(String key){
+//   remove(String key) {
 //     int index = hashing(key);
 //     List<List<dynamic>> bucket = table[index];
-//     for(int i =0;i<bucket.length;i++){
-//       if(bucket[i][0]==key){
+//     for (int i = 0; i < bucket.length; i++) {
+//       if (bucket[i][0] == key) {
 //         bucket.removeAt(i);
 //       }
 //     }
 //   }
 
-// display(){
-//   for(int i = 0;i<table.length;i++){
-//     print(table[i]);
+//   display() {
+//     for (int i = 0; i < table.length; i++) {
+//       print(table[i]);
+//     }
 //   }
 // }
-// }
 
-// void main(){
+// void main() {
 //   Hashtable table = Hashtable(3);
 //   table.set('name', 'kevin');
 //   table.set('age', 26);
 //   table.set('place', 'kannur');
-//   table.remove('age');
+//   // table.remove('age');
 //   table.display();
 
 //   // print(table.get('age'));
-//   }
+// }
 
 //-----------------------------------------------------------
 
-class Person{
-    int age;
-    String name;
-    Person(this.name,this.age);
-    
-    Person.otherName():name ='david',age=0;
+// 22/03/22
 
-    display(){
-        print('name:$name,age:$age');
-    }
-}
+// class HashTable {
+//   int size;
+//   List<List<List<dynamic>>> table;
+//   int itemCount = 0;
+//   double loadFactor = 0.75;
 
-void main(){
-    Person person = Person('manu', 16);
-    Person person1 = Person.otherName();
-    person1.display();
-    person.display();
-}
+//   HashTable(this.size) : table = List.generate(size, (_) => []);
+
+//   int hashing(String key) {
+//     int hash = 0;
+//     for (int i = 0; i < key.length; i++) {
+//       hash += key.codeUnitAt(i);
+//     }
+//     return hash;
+//   }
+
+//   int getIndex(String key) {
+//     return hashing(key) % size;
+//   }
+
+//   void resize() {
+//     int newSize = size * 2;
+//     List<List<List<dynamic>>> newTable = List.generate(newSize, (_) => []);
+//     for (var bucket in table) {
+//       for (var item in bucket) {
+//         int index = hashing(item[0]) % newSize;
+//         newTable[index].add(item);
+//       }
+//     }
+//     size = newSize;
+//     table = newTable;
+//   }
+
+//   void set(String key, dynamic value) {
+//     if ((itemCount / size) >= loadFactor) resize();
+//     int index = getIndex(key);
+//     List<List<dynamic>> bucket = table[index];
+//     for (int i = 0; i < bucket.length; i++) {
+//       if (bucket[i][0] == key) {
+//         bucket[i][1] = value;
+//         return;
+//       }
+//     }
+//     bucket.add([key, value]);
+//     itemCount++;
+//   }
+
+//   dynamic get(String key) {
+//     int index = getIndex(key);
+//     List<List<dynamic>> bucket = table[index];
+//     for (int i = 0; i < bucket.length; i++) {
+//       if (bucket[i][0] == key) {
+//         return bucket[i][1];
+//       }
+//     }
+//     return 'value not found';
+//   }
+
+//   void display() {
+//     for (int i = 0; i < table.length; i++) {
+//       if (table[i].isNotEmpty) {
+//         print('bucket $i : ${table[i]}');
+//       }
+//     }
+//   }
+// }
+
+// // Function to remove duplicates using HashTable
+// List<T> removeDuplicates<T>(List<T> inputList) {
+//   // Create a HashTable with initial size
+//   HashTable hashTable = HashTable(inputList.length);
+
+//   // Add each element to HashTable using its string representation as key
+//   for (T item in inputList) {
+//     String key = item.toString();
+//     hashTable.set(key, item);
+//   }
+
+//   // Create result list from unique values
+//   List<T> result = [];
+//   for (var bucket in hashTable.table) {
+//     for (var item in bucket) {
+//       result.add(item[1] as T);
+//     }
+//   }
+
+//   return result;
+// }
+
+// void main() {
+//   // Example usage with different types of lists
+//   List<int> numbers = [1, 2, 3, 2, 4, 1, 5];
+//   List<String> words = ['apple', 'banana', 'apple', 'cherry', 'banana'];
+
+//   List<int> uniqueNumbers = removeDuplicates(numbers);
+//   List<String> uniqueWords = removeDuplicates(words);
+
+//   print('Original numbers: $numbers');
+//   print('Unique numbers: $uniqueNumbers');
+//   print('Original words: $words');
+//   print('Unique words: $uniqueWords');
+
+//   // Using the original HashTable example
+//   HashTable table = HashTable(3);
+//   table.set('name', 'david');
+//   table.set('age', '27');
+//   table.display();
+// }
+
+// 
+
+

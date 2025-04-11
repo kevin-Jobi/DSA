@@ -13,5 +13,5 @@ factorial(int num) {
 }
 
 void main(){
-  print(factorial(4));
+  print(factorial(5));
 }

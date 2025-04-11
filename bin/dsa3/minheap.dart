@@ -1,4 +1,4 @@
-class MinHeap { 
+class MinHeap {
   List<int> _heap = [];
 
   // int get length => _heap.length;
@@ -92,8 +92,8 @@ void main() {
   heap.remove();
   // print(heap.parent(1)); // test test
   heap.display();
-  // List<int>arr=[11,3,-5,1,22];
-  // heap.buildHeap(arr);
-    // heap.display();
+  List<int>arr=[11,3,-5,1,22];
+  heap.buildHeap(arr);
+  heap.display();
   // print(heap.peek());
 }

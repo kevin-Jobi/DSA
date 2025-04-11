@@ -15,7 +15,6 @@ quickSort(List<int>arr){
   }
   return [...quickSort(left),pivot,...quickSort(right)];
 }
-
 void main(){
   List<int>arr = [8,3,2,1];
   print(quickSort(arr));
